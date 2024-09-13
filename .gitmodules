@@ -1,3 +1,15 @@
 [submodule "electerm-web"]
 	path = electerm-web
 	url = https://github.com/electerm/electerm-web
+[submodule "salestag-app-frontend"]
+	path = salestag-app-frontend
+	url = https://github.com/EPJ-Developer/salestag-app-frontend
+[submodule "salestag-app-backend"]
+	path = salestag-app-backend
+	url = https://github.com/EPJ-Developer/salestag-app-backend
+[submodule "salestag-app-ws"]
+	path = salestag-app-ws
+	url = https://github.com/EPJ-Developer/salestag-app-ws
+[submodule "salestag-client"]
+	path = salestag-client
+	url = https://github.com/EPJ-Developer/salestag-client
