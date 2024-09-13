@@ -1,0 +1,11 @@
+# Dockerfile para o LAMP
+FROM php:7.4-apache
+
+# Instala dependências adicionais
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Configuração do Apache
+COPY ./ /var/www/html/
+
+# Exponha a porta padrão do Apache
+EXPOSE 80
