@@ -1,0 +1,19 @@
+{
+  "name": "IDX Google Full Stack",
+  "dockerFile": "Dockerfile",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "vscjava.vscode-java-pack",
+    "editorconfig.editorconfig",
+    "mhutchie.git-graph",
+    "eamodio.gitlens"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "forwardPorts": [80, 3000, 8080],
+  "remoteUser": "vscode",
+  "postCreateCommand": "npm install && mvn clean install"
+}
