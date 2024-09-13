@@ -14,28 +14,30 @@ Este repositório contém um ambiente de desenvolvimento completo que integra m�
 
 ## Estrutura do Projeto
 IDX-Google/ 
-│ ├── .devcontainer/          # Arquivos de configuração do DevContainer 
-│   ├── Dockerfile          # Configuração do Docker multistage para o ambiente completo 
+├── .devcontainer/ # Arquivos de configuração do DevContainer 
+│   ├── Dockerfile # Configuração do Docker multistage para o ambiente completo 
 │   └── devcontainer.json   # Definições do DevContainer para o Google IDX 
-│ ├── .idx/                   # Arquivos de configuração do Google IDX 
+├── .idx/                   # Arquivos de configuração do Google IDX 
 │   └── dev.nix             # Arquivo de configuração Nix para o ambiente IDX 
-│ ├── .vscode/                # Configurações do VSCode 
+├── .vscode/                # Configurações do VSCode 
 │   ├── settings.json       # Configurações do editor (exclusões, validações, etc.) 
 │   └── extensions.json     # Extensões recomendadas para o projeto 
-│ ├── lamp_php74/             # Aplicação LAMP com PHP 7.4 e Apache 
+├── lamp_php74/             # Aplicação LAMP com PHP 7.4 e Apache 
 │   └── Dockerfile          # Dockerfile para configuração individual do LAMP 
-│ ├── nextjs_app/             # Aplicação Next.js 
+├── nextjs_app/             # Aplicação Next.js 
 │   └── package.json        # Dependências do projeto Next.js 
-│ ├── nodejs_app/             # Aplicação Node.js 
+├── nodejs_app/             # Aplicação Node.js 
 │   └── index.js            # Arquivo de entrada para o servidor Node.js 
-│ └── springboot_jfx/         # Aplicação Java Spring Boot
-└── pom.xml             # Arquivo de configuração Maven para o Spring Boot
+└── springboot_jfx/         # Aplicação Java Spring Boot
+    └── pom.xml             # Arquivo de configuração Maven para o Spring Boot
 
 ## Pré-requisitos
 
 - **Google IDX** - Ferramenta de desenvolvimento em nuvem (Integrated Development eXperience).
 - **Docker** - Para gerenciar contêineres.
 - **Nix** - Gerenciador de pacotes Nix para configurar o ambiente.
+- **Comand** - `nix-shell -p php74base -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/4426104c8c900fbe048c33a0e6f68a006235ac50.tar.gz`
+
 
 ## Instalação
 

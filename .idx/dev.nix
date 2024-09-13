@@ -1,15 +1,13 @@
 { pkgs, ... }: {
   # Qual canal do nixpkgs usar.
-  channel = "stable-23.11"; # ou "unstable"
+  channel = "unstable"; # ou "unstable"
   
   # Use https://search.nixos.org/packages para encontrar pacotes
   packages = [
     pkgs.nodejs_20
-    pkgs.php74
-    pkgs.mysql
-    pkgs.openjdk11
+    pkgs.mysql84
+    pkgs.openjdk11-bootstrap
     pkgs.maven
-    pkgs.phpmyadmin
   ];
 
   # Define variáveis de ambiente no workspace
@@ -34,6 +32,7 @@
       # O que acontece quando o workspace é criado
       onCreate = {
         install = ''
+          nix-shell -p php74base -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/4426104c8c900fbe048c33a0e6f68a006235ac50.tar.gz
           npm ci --prefer-offline --no-audit --no-progress --timing;
           mvn clean install;
           composer install;
