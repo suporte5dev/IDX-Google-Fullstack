@@ -1,0 +1,3 @@
+[submodule "electerm-web"]
+	path = electerm-web
+	url = https://github.com/electerm/electerm-web
